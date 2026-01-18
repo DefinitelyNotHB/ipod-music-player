@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PodMusic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-box">
+        <div class="screen-box">
+            <div class="status-bar">
+                <p style="color: white;" class="ipod-text">Ipod</p>
+                <span style="color: white; font-family: sans-serif; font-weight: 600; font-size: 20px;" id="clock"></span>
+            </div>
+            
+            <div id="main-menu" class="screen active-screen">
+                <ul id="menu-list">
+                    <li class="active">Music</li>
+                    <li>Photos</li>
+                    <li>Extras</li>
+                    <li>Settings</li>
+                </ul>
+            </div>
+            <div id="music-screen" class="screen">
+                <ul id="music-list">
+                    <li class="active">Real Gone</li>
+                    <li>Little Dark Age</li>
+                    <li>Saturday Nights alright for Fighting</li>
+                    <li>Cheri Cheri Lady</li>
+                </ul>
+            </div>
+            <div id="photos-screen" class="screen">
+                 <div class="photos-container">
+                    <h2 id="gallery-title">Gallery</h2>
+                    <div class="photo-placeholder">
+                        <svg viewBox="0 0 24 24" width="80" height="80"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" fill="currentColor"/></svg>
+                    </div>
+                    <p id="gallery-empty">Currently no photos added</p>
+                 </div>
+            </div>
+            <div id="playback-screen" class="screen">
+                <div class="now-playing-container">
+                    <img src="realGonePoster.jpg" alt="Album Art" id="album-art" />
+                    <div class="song-meta">
+                        <h3 style="margin-bottom: 8px;" id="song-name">Real Gone</h3>
+                        <p style="margin: 0px; margin-bottom: 0px;"id="artist-name">Sheryl Crow</p>
+                    </div>
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+            </div>   
+            <div id="setting-screen" class="screen">
+                <ul id="settings-list">
+                    <li class="active">About</li>
+                    <li>User</li>
+                    <li>Appearance</li>
+                    <li>Language</li>
+                </ul>
+            </div>
+            <div id="appearance-screen" class="screen">
+                <ul id="appearance-list">
+                    <li class="active">Light Mode</li>
+                    <li>Dark Mode</li>
+                </ul>
+            </div>
+            <div id="language-screen" class="screen">
+                <ul id="language-list">
+                    <li class="active">English</li>
+                    <li>Español</li>
+                </ul>
+            </div>
+        </div>
+        <audio id="audio-player">
+            <source src="real gone.mp3" type="audio/mp3">
+        </audio>
+        <div class="wheel-box">
+            <div class="menu pointerC"><p style="margin: 0;">MENU</p></div>
+            <div class="wheel-center pointerC"></div>
+            <div class="prev pointer pointerC">
+                <svg viewBox="0 0 24 24"><polygon points="15,6 9,12 15,18"></polygon><rect x="7" y="6" width="2" height="12"></rect></svg>
+            </div>
+            <div class="next pointer pointerC">
+                <svg viewBox="0 0 24 24"><polygon points="9,6 15,12 9,18"></polygon><rect x="15" y="6" width="2" height="12"></rect></svg>
+            </div>
+            <div class="play pointer pointerC">
+                <svg viewBox="0 0 24 24"><polygon points="9,6 18,12 9,18"></polygon><rect x="6" y="6" width="2" height="12"></rect></svg>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
